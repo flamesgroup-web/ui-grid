@@ -334,10 +334,10 @@
 
             $scope.handleClick = function(event) {
               // If the shift key is being held down, add this column to the sort
-              var add = false;
-              if (event.shiftKey) {
+              var add = true; // true by default
+              /*if (event.shiftKey) {
                 add = true;
-              }
+              }*/
 
               // Sort this column then rebuild the grid's rows
               uiGridCtrl.grid.sortColumn($scope.col, add)
